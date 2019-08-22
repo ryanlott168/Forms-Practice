@@ -15,14 +15,16 @@
         <h1>Create a burger!</h1>
        <section class="protein">
          <label for="patty">What type of protein would you like?</label>
-         <input type="text" name="patty" id="patty" value="Beyond Meat">
+         <input type="text" name="patty" id="patty" value="" required
+         pattern="[a-zA-Z]">
        </section>
        <hr>
 
        <section class="patties">
          <label for="amount">How many patties would you like?</label>
          <!--Add your code below-->
-         <input type="number" id="amount" step="5" name="amount">
+         <input type="number" id="amount" step="1" name="amount" min="1"
+         max="3" required>
 
        </section>
        <hr>
@@ -78,21 +80,24 @@
        <hr>
 
        <section class="sauce-selection">
-					<label for="sauce">What type of sauce would you like?</label>
-          <input list="sauces" id="sauce" name="sauce">
+					<span>What type of sauce would you like?</span>
+          <br>
+          <label for="ketchup">Ketchup</label>
+          <input  id="ketchup" type="checkbox" name="sauce" value="ketchup">
          <!--Add your code below-->
-          <datalist id="sauces">
-           	<option value="ketchup">Ketchup</option>
-           	<option value="mayo">Mayo</option>
-           	<option value="mustard">Mustard</option>
-          </datalist>
+         <label for="mayo">Mayo</label>
+         <input  id="Mayo" type="checkbox" name="sauce" value="mayo">
+         <label for="mustard">Mustard</label>
+         <input  id="mustard" type="checkbox" name="sauce" value="mustard">
         </section>
+        <hr>
 
         <section class="extra-info">
           <label for="extra">Anything else you want to add?</label>
           <br>
           <!--Add your code below-->
-          <textarea id="extra" name="extra" rows="3" cols="40">Please add extras here!</textarea>
+          <textarea id="extra" name="extra" rows="3" cols="40"
+          maxlength="100">Please add extras here!</textarea>
 
         </section>
         <hr>
